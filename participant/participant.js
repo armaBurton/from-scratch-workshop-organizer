@@ -24,7 +24,9 @@ participantForm.addEventListener(`submit`, async(e) => {
         name, 
         workshop_id
     });
-    
+
+    participantForm.reset();
+    window.location.href = `../workshops`;
 });
 
 const viewWorkshops = document.getElementById(`view-workshops`);

@@ -21,6 +21,8 @@
     margin-top: 10px;
     padding: 3px 10px;
     border: 1px dotted var(--dark-grey);
+    text-transform: capitalize;
+    cursor: pointer;
 }
 
 #new-participant{

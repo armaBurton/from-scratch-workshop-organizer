@@ -17,6 +17,6 @@ option, select{
     color: var(--dark-grey);
 }
 
-.name-input:required{
-    
+input{
+    color: var(--dark-grey);
 }

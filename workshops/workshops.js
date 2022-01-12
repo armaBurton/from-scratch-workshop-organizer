@@ -1,8 +1,11 @@
 import { 
     checkAuth,
     logout,
-    getWorkshops
+    getWorkshops,
+    deleteParticipant
 } from '../script/fetch-utils.js';
+
+checkAuth();
 
 const logoutButton = document.getElementById(`logout`);
 logoutButton.addEventListener(`click`, () => {
@@ -32,10 +35,29 @@ async function displayWorkshops(workshops){
         const participantsDiv = document.createElement(`div`);
         participantsDiv.classList.add(`participant-div`);
         workshopsName.textContent = w.name;
+
+        
         for (let item of w.participants){
-            console.log(item.name);
+            const person = await renderParticipant(item);
+            console.log(person);
+
+            person.addEventListener(`click`, async() => {
+                await deleteParticipant(item.id);
+                console.log(item);
+                displayWorkshops(workshops);
+            });
+            participantsDiv.append(person);
+
         }
         workshopsDiv.append(workshopsName, participantsDiv);
         workshopsContainer.append(workshopsDiv);
     }
+}
+
+async function renderParticipant(participant){
+    const person = document.createElement(`p`);
+    person.classList.add(`participant`);
+    person.textContent = participant.name;
+
+    return person;
 }

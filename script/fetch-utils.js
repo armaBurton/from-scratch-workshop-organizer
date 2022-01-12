@@ -15,6 +15,18 @@ export async function createParticipant(participant){
             ...participant,
             user_id: client.auth.session().user.id
         });
+
+    return checkError(response);
+}
+
+export async function deleteParticipant(id){
+    const response = await client
+        .from(`participants`)
+        .delete()
+        .match({ id })
+        .single();
+
+    return checkError(response);
 }
 
 export async function getWorkshops(){
