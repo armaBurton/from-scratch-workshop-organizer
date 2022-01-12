@@ -39,7 +39,7 @@ async function displayWorkshops(workshops){
 
         
         for (let item of w.participants){
-            const person = await renderParticipant(item);
+            const person = renderParticipant(item);
 
             person.addEventListener(`click`, async() => {
                 await deleteParticipant(item.id);
@@ -53,7 +53,7 @@ async function displayWorkshops(workshops){
     }
 }
 
-async function renderParticipant(participant){
+export function renderParticipant(participant){
     const person = document.createElement(`p`);
     person.classList.add(`participant`);
     person.textContent = participant.name;
