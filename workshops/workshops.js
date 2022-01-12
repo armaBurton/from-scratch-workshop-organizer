@@ -17,6 +17,11 @@ newUser.addEventListener(`click`, () => {
     window.location.href = `../participant`;
 });
 
+const addWorkshop = document.getElementById(`add-workshop`);
+addWorkshop.addEventListener(`click`, () => {
+    window.location.href = `../add-workshop`;
+});
+
 window.addEventListener(`load`, async() => {
     const workshops = await getWorkshops();
     console.log(workshops);

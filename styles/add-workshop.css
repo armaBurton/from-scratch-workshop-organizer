@@ -1,0 +1,22 @@
+*{
+    color: var(--aqua)
+}
+
+#view-workshops{
+    position: fixed;
+    top: 120px;
+    right: 40px;
+}
+
+button{
+    color: var(--dark-grey);
+}
+
+option, select{
+    margin-top: 10px;
+    color: var(--dark-grey);
+}
+
+input{
+    color: var(--dark-grey);
+}

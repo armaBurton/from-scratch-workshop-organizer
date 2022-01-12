@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/workshops.css">
+    <link rel="stylesheet" href="../styles/add-workshop.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,27 +18,20 @@
 
     </header> 
     <main>
-        <button id="new-participant">Add New Participant</button>
-        <button id="add-workshop">Add a Workshop</button>
+        <button id="view-workshops">Return to Workshops</button>
         <button id="logout">Logout</button>
-        <div class="title-card">
-            <h2 id="title">Workshop Organizer</h2>
-            <em>for the</em>
-            <p class="subtitle">Annual Conference of the Society for Dubious People</p>
-        </div>
-        <section class="workshops-container" id="workshops-container">
-            <div class="workshops-div">
-                <p class="workshop-name">skulduggery</p>
-                <div class="participant-div">
-                    <p class="participant">Hot Spot</p>
-                </div>
-            </div>
+        <section class="add-workshop-container" id="add-workshop-container">
+            <form class="add-workshop" id="add-workshop">
+                <h2>Enter new workshop.</h2>
+                <label>Workshop</label><input class="name-input" type="text" name="name" required>
+                <button class="add-workshop">Add Workshop</button>
+            </form>
         </section>
     </main>
 
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
-    <script type="module" src="./workshops.js"></script>
+    <script type="module" src="./add-workshop.js"></script>
 </body>
 </html>

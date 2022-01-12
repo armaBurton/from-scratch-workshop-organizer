@@ -19,6 +19,14 @@ export async function createParticipant(participant){
     return checkError(response);
 }
 
+export async function addWorkshop(name){
+    const response = await client
+        .from(`workshops`)
+        .insert({ name });
+
+    return checkError(response);
+}
+
 export async function deleteParticipant(id){
     const response = await client
         .from(`participants`)
