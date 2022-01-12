@@ -76,9 +76,21 @@ input{
 button{
     margin-top: 20px;
     width: 100px;
-    background-color: var(--light-grey);
+    background-color: var(--aqua);
+    border: 1px solid var(--aqua);
     padding: 3px 0;
     cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--dark-grey);
+    border: 1px solid var(--aqua);
+    color: var(--aqua);
+}
+
+button:active{
+    outline: 1px solid var(--aqua);
+    outline-offset: 5px;
 }
 
 #logout{

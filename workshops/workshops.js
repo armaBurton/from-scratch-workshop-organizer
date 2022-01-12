@@ -26,6 +26,7 @@ window.addEventListener(`load`, async() => {
 async function displayWorkshops(workshops){
     
     const workshopsContainer = document.querySelector(`.workshops-container`);
+    workshopsContainer.textContent = ``;
 
     for (let w of workshops){
         const workshopsDiv = document.createElement(`div`);
@@ -39,12 +40,10 @@ async function displayWorkshops(workshops){
         
         for (let item of w.participants){
             const person = await renderParticipant(item);
-            console.log(person);
 
             person.addEventListener(`click`, async() => {
                 await deleteParticipant(item.id);
-                console.log(item);
-                displayWorkshops(workshops);
+                location.reload();
             });
             participantsDiv.append(person);
 
