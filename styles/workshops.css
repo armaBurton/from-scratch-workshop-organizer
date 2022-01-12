@@ -78,3 +78,13 @@ em{
     top: 180px;
     right: 40px;
 }
+
+.name-trash-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.trash{
+    cursor: pointer;
+}

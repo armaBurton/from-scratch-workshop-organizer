@@ -37,6 +37,16 @@ export async function deleteParticipant(id){
     return checkError(response);
 }
 
+export async function deleteWorkshop(id){
+    const response =await client
+        .from(`workshops`)
+        .delete()
+        .match({ id })
+        .single();
+
+    return checkError(response);
+}
+
 export async function getWorkshops(){
     const response = await client
         .from(`workshops`)

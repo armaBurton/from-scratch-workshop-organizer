@@ -2,7 +2,8 @@ import {
     checkAuth,
     logout,
     getWorkshops,
-    deleteParticipant
+    deleteParticipant,
+    deleteWorkshop
 } from '../script/fetch-utils.js';
 
 checkAuth();
@@ -36,11 +37,31 @@ async function displayWorkshops(workshops){
     for (let w of workshops){
         const workshopsDiv = document.createElement(`div`);
         workshopsDiv.classList.add(`workshops-div`);
+
+        const nameTrashDiv = document.createElement(`div`);
+        nameTrashDiv.classList.add(`name-trash-div`);
+
         const workshopsName = document.createElement(`p`);
         workshopsName.classList.add(`workshop-name`);
+        workshopsName.textContent = w.name;
+
+        const trash = document.createElement(`p`);
+        trash.classList.add(`trash`);
+        trash.title = `Delete Workshop`;
+        trash.textContent = `🗑️`;
+
+        
+
+        trash.addEventListener(`click`, async() => {
+            await deleteWorkshop(w.id);
+            console.log(w.id);
+            location.reload();
+        });
+
+        nameTrashDiv.append(workshopsName, trash);
+
         const participantsDiv = document.createElement(`div`);
         participantsDiv.classList.add(`participant-div`);
-        workshopsName.textContent = w.name;
 
         
         for (let item of w.participants){
@@ -53,7 +74,7 @@ async function displayWorkshops(workshops){
             participantsDiv.append(person);
 
         }
-        workshopsDiv.append(workshopsName, participantsDiv);
+        workshopsDiv.append(nameTrashDiv, participantsDiv);
         workshopsContainer.append(workshopsDiv);
     }
 }
