@@ -1,0 +1,36 @@
+.workshops-div{
+    background-color: var(--aqua);
+    padding: 20px;
+    width: 250px;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.workshops-div:nth-child(even){
+    margin-right: 0;
+}
+
+.workshop-name{
+    font-weight: 900;
+    text-transform: capitalize;
+    font-size: 1.25rem;
+}
+
+.participant{
+    margin-top: 10px;
+    padding: 3px 10px;
+    border: 1px dotted var(--dark-grey);
+}
+
+#new-participant{
+    position: fixed;
+    top: 120px;
+    right: 40px;
+}
+
+.workshops-container{
+    width: 530px;
+    gap: 30px;
+    /* background-color: pink; */
+}

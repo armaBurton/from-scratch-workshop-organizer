@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/participant.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="gutter-right logo">
+            <img src="../assets/big-logo.png" />
+        </div>
+
+    </header> 
+    <main>
+        <button id="view-workshops">Return to Workshops</button>
+        <button id="logout">Logout</button>
+        <section class="participant-container" id="participant-container">
+            <form class="new-participant" id="new-participant">
+                <h2>Enter new participant.</h2>
+                <label>Name</label><input class="name-input" type="text" name="name" required>
+                <label>
+                    Workshops
+                    <select name="workshops" id="workshops-dropdown">
+
+                    </select>
+                </label>
+                <button class="add-participant">Add Participant</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+    </footer>
+    <script type="module" src="./participant.js"></script>
+</body>
+</html>
