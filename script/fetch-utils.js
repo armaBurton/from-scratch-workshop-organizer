@@ -62,7 +62,7 @@ export async function checkAuth() {
 
 export async function redirectIfLoggedIn() {
     if (await getUser()) {
-        location.replace('../workshops');
+        location.replace('./workshops');
     }
 }
 
