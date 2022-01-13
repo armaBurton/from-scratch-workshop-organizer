@@ -72,7 +72,7 @@ button{
     margin-top: 20px;
     width: 100px;
     background-color: var(--aqua);
-    border: 1px solid var(--aqua);
+    border: 1px solid var(--dark-grey);
     padding: 3px 0;
     cursor: pointer;
 }
