@@ -50,8 +50,6 @@ async function displayWorkshops(workshops){
         trash.title = `Delete Workshop`;
         trash.textContent = `🗑️`;
 
-        
-
         trash.addEventListener(`click`, async() => {
             await deleteWorkshop(w.id);
             console.log(w.id);

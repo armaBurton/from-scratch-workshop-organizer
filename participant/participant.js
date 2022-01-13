@@ -5,6 +5,8 @@ import {
     createParticipant
 } from '../script/fetch-utils.js';
 
+checkAuth();
+
 const logoutButton = document.getElementById(`logout`);
 logoutButton.addEventListener(`click`, () => {
     logout();
