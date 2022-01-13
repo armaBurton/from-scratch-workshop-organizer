@@ -1,5 +1,4 @@
-
-const SUPABASE_URL = "https://kufiexswxrkwnsauwakw.supabase.co"
+const SUPABASE_URL = 'https://kufiexswxrkwnsauwakw.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MTk0NTExMCwiZXhwIjoxOTU3NTIxMTEwfQ.MIoNiYovlqGhxYfqEvZwQfr2HTMseg-QTyO-308pZs4';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -38,7 +37,7 @@ export async function deleteParticipant(id){
 }
 
 export async function deleteWorkshop(id){
-    const response =await client
+    const response = await client
         .from(`workshops`)
         .delete()
         .match({ id })
