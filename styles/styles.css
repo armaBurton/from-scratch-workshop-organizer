@@ -35,13 +35,14 @@ body{
 }
 
 main {
-    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
+    margin-top: 250px;
+    padding-bottom: 250px;
 }
 
 form {
@@ -115,6 +116,7 @@ header {
     height: var(--header-height);
     box-shadow: var(--shadow);
     width: 100%;
+    top: 0;
 }
 
 footer {

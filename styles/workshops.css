@@ -87,4 +87,14 @@ em{
 
 .trash{
     cursor: pointer;
+    opacity: 0.3;
+}
+
+.trash:hover{
+    text-shadow: 1px 1px 1px var(--dark-grey);
+    opacity: 1;
+}
+
+.trash:active{
+    opacity: 0.65;
 }
